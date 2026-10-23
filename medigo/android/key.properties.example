@@ -1,0 +1,8 @@
+# Copy this file to android/key.properties and fill in your values
+# Path can be relative to the android/ directory or absolute
+storeFile=keystore/medigo.jks
+storePassword=YOUR_STORE_PASSWORD
+keyAlias=YOUR_KEY_ALIAS
+keyPassword=YOUR_KEY_PASSWORD
+# Optional: uncomment if you use PKCS12 instead of JKS
+# storeType=pkcs12

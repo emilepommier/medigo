@@ -1,0 +1,134 @@
+2026-01-28 16:04:59 - 🔍 Running pre-flight checks...
+2026-01-28 16:04:59 - ✅ Pre-flight checks passed
+2026-01-28 16:05:01 - ✅ Version updated to 1.10.3
+2026-01-28 16:05:01 - 🔢 Using build number: 44
+2026-01-28 16:05:02 - 📱 Building for: Android only
+2026-01-28 16:05:03 - 🧹 Deleting old medigo folder...
+2026-01-28 16:05:08 - 📂 Unzipping project...
+2026-01-28 16:05:09 - ✅ Project reset complete
+2026-01-28 16:05:10 - 🚀 Starting build process...
+2026-01-28 16:05:10 - 🧹 Running flutter clean...
+2026-01-28 16:05:14 - Cleaning Xcode workspace...                                      2,509ms
+2026-01-28 16:05:14 - Deleting ephemeral...                                                0ms
+2026-01-28 16:05:14 - Deleting Generated.xcconfig...                                       0ms
+2026-01-28 16:05:14 - Deleting flutter_export_environment.sh...                            0ms
+2026-01-28 16:05:14 - Deleting .flutter-plugins-dependencies...                            0ms
+2026-01-28 16:05:14 - 📦 Running flutter pub get...
+2026-01-28 16:05:15 - Resolving dependencies...
+2026-01-28 16:05:16 - Downloading packages...
+2026-01-28 16:05:16 -   app_links 6.4.1 (7.0.0 available)
+2026-01-28 16:05:16 -   characters 1.4.0 (1.4.1 available)
+2026-01-28 16:05:16 -   crypto 3.0.6 (3.0.7 available)
+2026-01-28 16:05:16 -   ffi 2.1.4 (2.1.5 available)
+2026-01-28 16:05:16 -   file_selector_macos 0.9.4+4 (0.9.5 available)
+2026-01-28 16:05:16 -   flutter_local_notifications 19.5.0 (20.0.0 available)
+2026-01-28 16:05:16 -   flutter_local_notifications_linux 6.0.0 (7.0.0 available)
+2026-01-28 16:05:16 -   flutter_local_notifications_platform_interface 9.1.0 (10.0.0 available)
+2026-01-28 16:05:16 -   flutter_local_notifications_windows 1.0.3 (2.0.0 available)
+2026-01-28 16:05:16 -   flutter_plugin_android_lifecycle 2.0.31 (2.0.33 available)
+2026-01-28 16:05:16 -   go_router 14.8.1 (17.0.1 available)
+2026-01-28 16:05:16 -   google_fonts 6.2.1 (8.0.0 available)
+2026-01-28 16:05:16 -   http 1.4.0 (1.6.0 available)
+2026-01-28 16:05:16 -   image 4.5.4 (4.7.2 available)
+2026-01-28 16:05:16 -   image_picker_android 0.8.13+1 (0.8.13+13 available)
+2026-01-28 16:05:16 -   image_picker_ios 0.8.13 (0.8.13+3 available)
+2026-01-28 16:05:16 -   image_picker_macos 0.2.2 (0.2.2+1 available)
+2026-01-28 16:05:16 - > leak_tracker 11.0.2 (was 10.0.9)
+2026-01-28 16:05:16 - > leak_tracker_flutter_testing 3.0.10 (was 3.0.9)
+2026-01-28 16:05:16 - > leak_tracker_testing 3.0.2 (was 3.0.1)
+2026-01-28 16:05:16 -   matcher 0.12.17 (0.12.18 available)
+2026-01-28 16:05:16 -   material_color_utilities 0.11.1 (0.13.0 available)
+2026-01-28 16:05:16 - > meta 1.17.0 (was 1.16.0) (1.18.1 available)
+2026-01-28 16:05:16 -   path_provider_android 2.2.17 (2.2.22 available)
+2026-01-28 16:05:16 -   path_provider_foundation 2.4.1 (2.6.0 available)
+2026-01-28 16:05:16 -   shared_preferences 2.5.3 (2.5.4 available)
+2026-01-28 16:05:16 -   shared_preferences_android 2.4.13 (2.4.20 available)
+2026-01-28 16:05:16 -   shared_preferences_foundation 2.5.4 (2.5.6 available)
+2026-01-28 16:05:16 - > test_api 0.7.7 (was 0.7.4) (0.7.9 available)
+2026-01-28 16:05:16 -   timezone 0.10.1 (0.11.0 available)
+2026-01-28 16:05:16 -   url_launcher_android 6.3.20 (6.3.28 available)
+2026-01-28 16:05:16 -   url_launcher_ios 6.3.4 (6.3.6 available)
+2026-01-28 16:05:16 -   url_launcher_macos 3.2.3 (3.2.5 available)
+2026-01-28 16:05:16 -   url_launcher_web 2.4.1 (2.4.2 available)
+2026-01-28 16:05:16 - > vector_math 2.2.0 (was 2.1.4)
+2026-01-28 16:05:16 -   vm_service 15.0.0 (15.0.2 available)
+2026-01-28 16:05:16 - Changed 6 dependencies!
+2026-01-28 16:05:16 - 32 packages have newer versions incompatible with dependency constraints.
+2026-01-28 16:05:16 - Try `flutter pub outdated` for more information.
+2026-01-28 16:05:16 - 🖼️ Building app icons...
+2026-01-28 16:05:18 -   ════════════════════════════════════════════
+2026-01-28 16:05:18 -      FLUTTER LAUNCHER ICONS (v0.14.4)                               
+2026-01-28 16:05:18 -   ════════════════════════════════════════════
+2026-01-28 16:05:18 -   
+2026-01-28 16:05:18 - • Creating default icons Android
+2026-01-28 16:05:18 - • Creating adaptive icons Android
+2026-01-28 16:05:18 - • Overwriting the default Android launcher icon with a new icon
+2026-01-28 16:05:18 - • No colors.xml file found in your Android project
+2026-01-28 16:05:18 - • Creating colors.xml file and adding it to your Android project
+2026-01-28 16:05:18 - • Creating mipmap xml file Android
+2026-01-28 16:05:18 - • Overwriting default iOS launcher icon with new icon
+2026-01-28 16:05:19 - No platform provided
+2026-01-28 16:05:19 - 
+2026-01-28 16:05:19 - ✓ Successfully generated launcher icons
+2026-01-28 16:05:19 - 🤖 Starting Android build...
+2026-01-28 16:05:19 - 🔑 Copying keystore...
+2026-01-28 16:05:20 - 📁 Created keystore directory: /Users/emile.pommier/Developpment/DreamFlow/Medigo/medigo/android/keystore
+2026-01-28 16:05:20 - ✅ Keystore copied successfully
+2026-01-28 16:05:20 - 📝 Copying and fixing key.properties...
+2026-01-28 16:05:20 - ✅ Key properties copied and path fixed for Gradle
+2026-01-28 16:05:20 - ℹ️ storeFile=keystore/medigo.jks
+2026-01-28 16:05:20 - 🔍 Verifying signing configuration...
+2026-01-28 16:05:21 - ✅ Keystore file found at: keystore/medigo.jks
+2026-01-28 16:05:21 - 🔍 Verifying keystore credentials...
+2026-01-28 16:05:21 - ✅ Keystore credentials verified successfully
+2026-01-28 16:05:21 - ✅ Signing configuration detected in app/build.gradle
+2026-01-28 16:05:21 - ⚙️ Building Android APK with version 1.10.3 and build number 44...
+2026-01-28 16:05:23 - Running Gradle task 'assembleRelease'...                        
+2026-01-28 16:05:23 - [android] Using release keystore: /Users/emile.pommier/Developpment/DreamFlow/Medigo/medigo/android/keystore/medigo.jks | alias: medigo-key
+2026-01-28 16:05:38 - Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1056 bytes (99.6% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+2026-01-28 16:05:38 - Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 12344 bytes (99.2% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+2026-01-28 16:06:43 - Info: Proguard configuration rule does not match anything: `-keepclassmembers class j$.util.concurrent.ConcurrentHashMap$TreeBin {
+2026-01-28 16:06:43 -   int lockState;
+2026-01-28 16:06:43 - }`
+2026-01-28 16:06:43 - Info: Proguard configuration rule does not match anything: `-keepclassmembers class j$.util.concurrent.ConcurrentHashMap {
+2026-01-28 16:06:43 -   int sizeCtl;
+2026-01-28 16:06:43 -   int transferIndex;
+2026-01-28 16:06:43 -   long baseCount;
+2026-01-28 16:06:43 -   int cellsBusy;
+2026-01-28 16:06:43 - }`
+2026-01-28 16:06:43 - Info: Proguard configuration rule does not match anything: `-keepclassmembers class j$.util.concurrent.ConcurrentHashMap$CounterCell {
+2026-01-28 16:06:43 -   long value;
+2026-01-28 16:06:43 - }`
+2026-01-28 16:06:43 - Info: Proguard configuration rule does not match anything: `-keepclassmembers class j$.util.IntSummaryStatistics {
+2026-01-28 16:06:43 -   long count;
+2026-01-28 16:06:43 -   long sum;
+2026-01-28 16:06:43 -   int min;
+2026-01-28 16:06:43 -   int max;
+2026-01-28 16:06:43 - }`
+2026-01-28 16:06:43 - Info: Proguard configuration rule does not match anything: `-keepclassmembers class j$.util.LongSummaryStatistics {
+2026-01-28 16:06:43 -   long count;
+2026-01-28 16:06:43 -   long sum;
+2026-01-28 16:06:43 -   long min;
+2026-01-28 16:06:43 -   long max;
+2026-01-28 16:06:43 - }`
+2026-01-28 16:06:43 - Info: Proguard configuration rule does not match anything: `-keepclassmembers class j$.util.DoubleSummaryStatistics {
+2026-01-28 16:06:43 -   long count;
+2026-01-28 16:06:43 -   double sum;
+2026-01-28 16:06:44 -   double min;
+2026-01-28 16:06:44 -   double max;
+2026-01-28 16:06:44 - }`
+2026-01-28 16:06:46 - Running Gradle task 'assembleRelease'...                           84.2s
+2026-01-28 16:06:47 - ✓ Built build/app/outputs/flutter-apk/app-release.apk (137.3MB)
+2026-01-28 16:06:48 - ✅ Android APK build complete!
+2026-01-28 16:06:48 - ✅ Build complete!
+2026-01-28 16:08:23 - 📤 Uploading Android APK to Firebase App Distribution...
+i  uploading binary...
+✔  uploaded new release 1.10.3 (44) successfully!
+✔  View this release in the Firebase console: https://console.firebase.google.com/project/medigo-46be3/appdistribution/app/android:ovh.pommier.medigo/releases/1j6e4b4aa862o?utm_source=firebase-tools
+✔  Share this release with testers who have access: https://appdistribution.firebase.google.com/testerapps/1:200614907934:android:31cc5e295a901d3e9a1e0f/releases/1j6e4b4aa862o?utm_source=firebase-tools
+✔  Download the release binary (link expires in 1 hour): https://firebaseappdistribution.googleapis.com/app-binary-downloads/projects/200614907934/apps/1:200614907934:android:31cc5e295a901d3e9a1e0f/releases/1j6e4b4aa862o/binaries/8d79357f3371ad053c92349e470d9990cc24d7fc911acc41bff0b0ff00b73afc/app.apk?utm_source=firebase-tools&token=ACSFockAAAAAaXo0jn7m7_qzCenpk1ze-7r97ChTi5Ei3WHT0dDZh-XCyeLxA8hF3zR08bKKGTwsDj9Jl7zlXvrbsuSrKoqe4B1g1ech5pCqCiFXvsqHf7-oAUPRiOEucffof4WAAxJXpK871dcIHY14ffWvim7btsU-5FLvtdFwFTy6oXUFNtC3qQO_aAHHEf0tHkxiEkIEsFCMeJXSyFFjNrUB00AKsmpz-cm-JDgT4-Az_DTv3juMfiO9ysePGp-cpjQPdU_3mj68jMZFOnlLyIl-Jsc_HCvyoaFNW2lb6MVajt-NZNyrHfYujQmlGnQoVgh2TuFRdCfi38B3vnr9gaWK-q_A4KK5VQA
+i  updating release notes...
+✔  added release notes successfully
+i  distributing to testers/groups...
+✔  distributed to testers/groups successfully
+2026-01-28 16:08:48 - ✅ Android APK successfully uploaded to Firebase!

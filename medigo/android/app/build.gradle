@@ -1,0 +1,113 @@
+plugins {
+    id "com.android.application"
+    // Use the canonical Kotlin Android plugin id to align with settings.gradle
+    id "org.jetbrains.kotlin.android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+// Resolve storeFile relative to the android/ (rootProject) directory instead of app/
+def storeFileProp = keystoreProperties['storeFile']
+File resolvedStoreFile = null
+if (storeFileProp != null) {
+    def candidate = new File(storeFileProp)
+    resolvedStoreFile = candidate.isAbsolute() ? candidate : rootProject.file(storeFileProp)
+}
+
+// Optional explicit keystore type; AGP can read both JKS/PKCS12, but on some JDKs
+// an explicit type avoids auto-detection issues. Example values: 'jks' or 'pkcs12'.
+def storeTypeProp = keystoreProperties['storeType']
+
+// If keyPassword is omitted, Gradle doesn't always fall back to storePassword.
+// Compute an effective password to avoid nulls.
+def storePasswordProp = keystoreProperties['storePassword']
+def keyPasswordProp = keystoreProperties['keyPassword']
+def effectiveKeyPassword = (keyPasswordProp != null && keyPasswordProp.trim()) ? keyPasswordProp : storePasswordProp
+
+def hasReleaseKeystore = keystorePropertiesFile.exists() &&
+        storeFileProp != null &&
+        resolvedStoreFile != null &&
+        resolvedStoreFile.exists()
+
+android {
+    namespace = "ovh.pommier.medigo"
+    // Explicitly set to 35 to satisfy AndroidX 1.16/1.10 requirements
+    compileSdk = 35
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        // AGP 8.5+ and Kotlin 2.x require Java 17
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+        // Needed for libraries that use newer java.time APIs, Streams, etc.
+        // Fixes: ':flutter_local_notifications' requires core library desugaring to be enabled
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    signingConfigs {
+        if (hasReleaseKeystore) {
+            release {
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword effectiveKeyPassword
+                storeFile resolvedStoreFile
+                storePassword storePasswordProp
+                if (storeTypeProp != null && storeTypeProp.trim()) {
+                    storeType storeTypeProp
+                }
+                println("[android] Using release keystore: ${resolvedStoreFile} | alias: ${keystoreProperties['keyAlias']}")
+            }
+        }
+    }
+
+    defaultConfig {
+        applicationId = "ovh.pommier.medigo"
+        // BiometricPrompt (used by local_auth) requires at least SDK 23
+        minSdkVersion = flutter.minSdkVersion
+        // Explicit target to 35; independent from compileSdk but keeps behaviors current
+        targetSdk = 35
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            if (hasReleaseKeystore) {
+                signingConfig = signingConfigs.release
+            } else {
+                signingConfig = signingConfigs.debug
+                println("[android] No release keystore found → signing RELEASE with DEBUG keystore for local install.")
+                println("[android] Expected: android/key.properties and a keystore at path from storeFile (relative to android/ or absolute).")
+            }
+            // Enable code shrink/obfuscation and apply ProGuard rules to keep ONNX Runtime classes
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Enable Java 8+ API desugaring for backward compatibility on older Android versions
+    // See: https://developer.android.com/studio/write/java8-support#library-desugaring
+    // flutter_local_notifications requires desugaring libs 2.1.4+
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
+
+    // Fix R8 missing classes for Flutter PlayStoreDeferredComponentManager
+    // Provides com.google.android.play.core.* (SplitCompat, SplitInstall, tasks, etc.)
+    implementation 'com.google.android.play:core:1.10.3'
+}
